@@ -1,0 +1,474 @@
+body {
+    overflow: auto;
+}
+
+.nav-header {
+    overflow: auto;
+    height: 100px;
+    background: black;
+    border-bottom: outset black;
+}
+.nav-header a {
+    display: flex;
+    word-spacing: 3px;
+    letter-spacing: 5px;
+    font: 40px "Italiana", serif;
+    padding: 30px 0 0 300px;
+}
+
+.nav-logo {
+    font-size: 2rem;
+    color: rgb(223, 50, 50);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 20px 100px;
+}
+.nav-logo span {
+    color: white;
+}
+
+.header {
+    margin-top: 100px;
+    width: 300px;
+    position: absolute;
+    padding: 25px 0 300px;
+    height: 100%;
+    background: black;
+    overflow: scroll;
+}
+.header .profile-img img {
+    display: block;
+    width: 170px;
+    height: 180px;
+    margin: 15px auto;
+    border: 8px solid #c0262a;
+    background: white;
+}
+.logo h1 {
+    font-size: 25px;
+    margin-right: 100px;
+    font-weight: 700;
+    padding: 0 0 0 90px;
+    color: white;
+}
+.header a {
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar {
+    position: absolute;
+    z-index: 9997;
+    color: #c0262a;
+    height: 100%;
+}
+.navbar ul {
+    list-style: none;
+}
+.navbar ul li {
+    padding: 15px 0;
+    font-size: 20px;
+}
+.navbar a {
+    color: #c0262a;
+}
+.navbar a:focus,
+.navbar a:hover {
+    color: #cf5357;
+    font-family: sans-serif;
+}
+.navbar .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 25px;
+}
+.social-links li {
+    font-size: 25px;
+    display: inline-block;
+    padding: 20px 5px 0 0;
+}
+.navbar .navbar-brand {
+    font-size: 30px;
+}
+.navbar .navbar-nav .dropdown-menu {
+    position: absolute;
+}
+.nav-item .dropdown-toggle {
+    border: none;
+    color: white;
+}
+.nav-item .dropdown-menu a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+.nav-item .dropdown-menu a:hover {
+    background: #c0262a;
+    color: white;
+}
+.nav-link.dropdown-toggle:focus {
+    color: white !important;
+}
+
+main {
+    margin-left: 320px !important;
+    animation: bottomIn 1.2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.4s;
+}
+
+.resume {
+  margin-left: 320px;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.Kingaw a,
+.nav-item,
+.social-links,
+.profile-img,
+.logo {
+    animation: zoomIn 1.6s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
+}
+
+@keyframes bottomIn {
+    from {
+        transform: translateY(250px) scale(0.6);
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+.portfolio-title {
+    animation: bottomIn 1s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.2s;
+}
+
+/*resume*/
+.container-resume {
+  max-width: 1500px;
+  margin: 0 auto;
+  background: gray;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Section Headers */
+hr.divider {
+  border: none;
+  height: 3px;
+  background-color: black;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Job Experience */
+.job h3 {
+  color: #333;
+  font-size: 1.2em;
+  margin-top: 5px;
+}
+.job p {
+  font-size: 0.9em;
+  color: #555;
+}
+.job ul {
+  margin-top: 5px;
+  padding-left: 20px;
+}
+.job ul li {
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+/* Skills Section */
+.skills ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+.skills li {
+  background: #df421a;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Horizontal Layout for Education */
+.education-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.education-item {
+  flex: 1;
+  cursor: pointer;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.education-item:hover {
+  transform: scale(1.05);
+}
+.education-item h3 {
+  font-size: 1.2em;
+  margin: 0;
+}
+.education-item p {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* modal section */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+  overflow: auto;
+  transition: opacity 0.3s ease;
+}
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 600px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+.modal-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.modal-title {
+  font-size: 1.5em;
+  color: #333;
+}
+.modal-body ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+}
+.modal-body li {
+  margin-bottom: 10px;
+}
+.close {
+  color: #000;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+.close:hover {
+  color: red;
+}
+/* Smooth transition for modal open/close */
+.modal.fade .modal-dialog {
+  transform: translateY(-50%);
+}
+
+.modal.show .modal-dialog {
+  transform: translateY(0);
+}
+
+/*porflio css*/
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* Popup Card Styles */
+.card {
+    width: 335.725px;
+    background: red;
+    font-size: 10pt;
+    word-wrap: break-word;
+}
+.card img {
+    height: 250px;
+}
+.popup-card {
+    position: absolute;
+    display: none;
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%; 
+    max-width: 800px; 
+    z-index: 9999; 
+    background-color: rgb(101, 98, 98); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.popup-card-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 80vh;
+}
+
+.close-btn {
+    position: absolute;
+    top: -20px;
+    right: -3px;
+    cursor: pointer;
+    font-size: 35px;
+    color: black;
+}
+.close-btn:hover {
+    color: red;
+}
+
+/*contact*/
+.contact-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: gray;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .section-title {
+    background-color: white;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  .section-title p {
+    color: #c00000;
+    margin: 5px 0 0;
+  }
+
+  .info-wrap {
+    background-color: var(--surface-color);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .info-item i {
+    font-size: 20px;
+    color: var(--accent-color);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(0, 123, 255, 0.1);
+    margin-right: 15px;
+  }
+
+  .info-item h3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .info-item p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .php-email-form {
+    padding: 30px;
+    background-color: var(--surface-color);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .php-email-form input,
+  .php-email-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    border-radius: 5px;
+  }
+
+  .php-email-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(108, 108, 198);
+    color: var(--contrast-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .php-email-form button:hover {
+    background-color: rgba(0, 123, 255, 0.8);
+  }
+
+  .loading,
+  .error-message,
+  .sent-message {
+    text-align: center;
+    margin-bottom: 15px;
+    display: none;
+  }
+
+  .loading {
+    color: #666666;
+  }
+
+  .error-message {
+    color: red;
+  }
+
+  .sent-message {
+    color: green;
+  }
