@@ -645,6 +645,7 @@ main {
   box-shadow: var (--shadow-2);
 }
 
+
 .modal-img-wrapper > img { display: none; }
 
 .modal-title { margin-bottom: 4px; }
@@ -1122,7 +1123,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box { border-radius: 30px; }
 
-  .avatar-box img { width: 120px; }
+  .avatar-box img { width: 120px; border-radius: 30px; }
 
   .info-content .name { margin-bottom: 15px; }
 
