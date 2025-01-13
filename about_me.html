@@ -1,461 +1,914 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kingaw Info</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
 
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="css/about_me.css">
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="images/icon/pirate.png" type="image/x-icon">
 
-    <!-- Bootstrap Links -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="icons/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="fonts/bootstrap-icons.woff">
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="/css/about_me.css">
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/pirate.png">
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="nav-header sticky-top">
-        <div class="Kingaw">
-            <a class="nav-logo">King<span>aw</span></a>
-        </div>
-    </nav>
 
-    <header id="header" class="header d-flex flex-column fixed-top">
-        <div class="profile-img">
-            <img src="images/asdf.jpg" class="img-fluid rounded-circle" alt="Profile Image">
-        </div>
-        <a href="images/pirate.png" class="logo d-flex align-items-center justify-content-center">
-            <h1 >Christian</h1>
-        </a>
+  <!--
+    - #MAIN
+  -->
 
-        <!-- Social Media Icons -->
-        <div class="social-links text-center">
-            <a href="#" class="facebook" style="color: rgb(64, 64, 241);">
-                <i class="bi-facebook"></i>
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="/images/profile/asdf.jpg" alt="Richard hanrick" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Kingaw Christian</h1>
+
+          <p class="title">Programmer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">christiankingaw69@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">+639852787067</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">December 19, 2003</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Philippines</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
             </a>
-            <a href="#" class="twitter" style="color: rgb(89, 173, 211);">
-                <i class="bi-twitter"></i>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
             </a>
-            <a href="#" class="youtube" style="color: red;">
-                <i class="bi-youtube"></i>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
             </a>
-            <a href="#" class="linkedin" style="color: rgb(82, 82, 189);">
-                <i class="bi-linkedin"></i>
-            </a>
-        </div>
-        
-        <!-- Navigation -->
-        <nav class="navbar" id="navbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link bi-house-fill" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link bi-newspaper" href="#resume">Resume</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link bi-folder-check" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-                        More Links
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item bi-link" href="#services">Service</a></li>
-                        <li><a class="dropdown-item bi-telephone-fill" href="#contact">Contact</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+          </li>
 
-<!-- Resume Section --> 
-<section id="resume" class="resume">
-  <hr>
-  <h1>Resume</h1>
-  <div class="container-resume">
-    <!-- Professional Summary Section -->
-    <section class="summary">
-      <h2>Professional Summary</h2>
-      <hr class="divider">
-      <p>A highly skilled web developer with years of experience in creating responsive, user-friendly websites and applications. Passionate about delivering solutions that exceed client expectations and ensuring top-notch performance.</p>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="experience">
-      <h2>Experience</h2>
-      <hr class="divider">
-      <div class="job">
-        <h3>Senior Web Developer</h3>
-        <p><strong>Umbrella Company</strong>, 2020 - Present</p>
-        <ul>
-          <li>Designed and implemented responsive web applications using HTML, CSS, and JavaScript.</li>
-          <li>Collaborated with cross-functional teams to deliver projects on time and within budget.</li>
-          <li>Optimized website performance, improving load time by 35% and enhancing user experience.</li>
         </ul>
+
       </div>
 
-      <div class="job">
-        <h3>Junior Web Developer</h3>
-        <p><strong>Space X Corporation</strong>, 2018 - 2020</p>
-        <ul>
-          <li>Developed and maintained websites for small businesses, focusing on user experience.</li>
-          <li>Ensured cross-browser compatibility and mobile responsiveness for all projects.</li>
-          <li>Assisted in debugging, testing, and implementing new features on various web platforms.</li>
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
         </ul>
-      </div>
-    </section>
 
-    <!-- Education Section -->
-    <section class="education">
-      <h2>Education</h2>
-      <hr class="divider">
-      <div class="education-items">
-        <!-- First Education Item -->
-        <div class="education-item" onclick="openModal(1)">
-          <h3>University of Tech</h3>
-          <p><strong>Bachelor of Science in Computer Science</strong><br>2014 - 2018</p>
-        </div>
-    
-        <!-- Second Education Item -->
-        <div class="education-item" onclick="openModal(2)">
-          <h3>Tech University</h3>
-          <p><strong>Master's in Software Engineering</strong><br>2019 - 2021</p>
-        </div>
-    
-        <!-- Third Education Item -->
-        <div class="education-item" onclick="openModal(3)">
-          <h3>Global Institute of Computing</h3>
-          <p><strong>Diploma in Web Development</strong><br>2022 - Present</p>
-        </div>
-      </div>
-    </section>
+      </nav>
 
-    <!-- Skills Section -->
-    <section class="skills">
-      <h2>Skills</h2>
-      <hr class="divider">
-      <ul>
-        <li>HTML5, CSS3, JavaScript (ES6+)</li>
-        <li>React.js, Node.js</li>
-        <li>Responsive Web Design</li>
-        <li>Version Control (Git, GitHub)</li>
-        <li>Performance Optimization & Debugging</li>
-      </ul>
-    </section>
-  </div>
 
-<!-- Modal for Education 1 -->
 
-<!-- Main Modal for Education -->
-<div class="modal fade" id="educationModal1" tabindex="-1" aria-labelledby="educationModalLabel1" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">University of Tech - Bachelor of Science in Computer Science</h5>
-      </div>
-      <div class="modal-body">
-        <h4>Awards & Certifications</h4>
-        <ul>
-          <li><a href="#" data-bs-toggle="modal" data-bs-target="#subModal1">Dean's List (2016, 2017)</a></li>
-          <li>Certified Web Developer - Web Development Association (2017)</li>
-          <li>Best Thesis Award (2018)</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Sub modal 1 -->
-<div class="modal fade" id="subModal1" tabindex="-1" aria-labelledby="subModalLabel1" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="subModalLabel1">Dean's List (2016, 2017) - Details</h5>
-      </div>
-      <div class="modal-body">
-        <p>This is more detailed information about being on the Dean's List for the years 2016 and 2017. It highlights the academic achievements and the requirements for being placed on the Dean's List.</p>
-        <img src="images/dean's.png" alt="" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- Modal for Education 2 -->
-<div class="modal fade" id="educationModal2" tabindex="-1" aria-labelledby="educationModalLabel2" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">University of Tech - Bachelor of Science in Computer Science</h5>
-      </div>
-      <div class="modal-body">
-        <h4>Awards & Certifications</h4>
-        <ul>
-          <li><a href="#" data-bs-toggle="modal" data-bs-target="#subModal2">Top 10% Graduates</a></li>
-          <li>Advanced Programming Techniques (Certification)</li>
-          <li>Machine Learning Certification (2021)</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Sub modal 2 -->
-<div class="modal fade" id="subModal2" tabindex="-1" aria-labelledby="subModalLabel2" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="subModalLabel1">Top 10% Graduates - Details</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>This is more detailed information about being on the Dean's List for the years 2016 and 2017. It highlights the academic achievements and the requirements for being placed on the Dean's List.</p>
-        <img src="images/graduate.jpg" alt="" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- Modal for Education 3 -->
-<div class="modal fade" id="educationModal3" tabindex="-1" aria-labelledby="educationModalLabel3" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">University of Tech - Bachelor of Science in Computer Science</h5>
-      </div>
-      <div class="modal-body">
-        <h4>Awards & Certifications</h4>
-        <ul>
-          <li><a href="#" data-bs-toggle="modal" data-bs-target="#subModal3">Web Development Certification</a></li>
-          <li>Advanced JavaScript Techniques</li>
-          <li>Responsive Web Design Best Practices</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Sub modal 3 -->
-<div class="modal fade" id="subModal3" tabindex="-1" aria-labelledby="subModalLabel3" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="subModalLabel1">Web Development Certification - Details</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>This is more detailed information about being on the Dean's List for the years 2016 and 2017. It highlights the academic achievements and the requirements for being placed on the Dean's List.</p>
-        <img src="images/web dev cert.png" alt="" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
+      <!--
+        - #ABOUT
+      -->
 
-    <main>
-<!--Portfolio-->
-<div class="portfolio-container" id="portfolio">
-  <div class="portfolio-title">
-    <h1>Portfolio</h1>
-    <hr>
-</div>
-  <!-- Portfolio Cards -->
-<!--First Modal-->
-    <div class="card">
-      <img src="images/portfolio img/app/Cordiapp.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title"><strong>Cordispeak: A Collaborative Language Translation Project</strong></h5>
-        <p class="card-text">A Bridge Between Cultures</p>
-        <button id="openCardBtn">Show Details</button>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-          
-  <!--Second Modal-->
-<div class="popup-card" id="popupCard">
-  <img src="images/portfolio img/app/Cordiapp.png" class="card-img-top">
-  <div class="popup-card-content">
-      <div class="card-body">
-        <h5 class="card-title">Cordispeak: A Collaborative Language Translation Project</h5>
-        <p class="card-text"><strong>A Bridge Between Cultures</strong></p>
-                <p>In collaboration with Chielo Depao, a fellow student at Benguet State University pursuing a degree in Tourism, we embarked on an exciting project to develop a language translation tool named Cordispeak. This innovative tool aims to facilitate seamless communication between locals and tourists in the Cordillera region, fostering cultural exchange and understanding.</p>
-                <p><strong>Our Focus: The User Interface</strong></p>
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hello! I’m an aspiring programmer based in the Philippines. My passion lies in creating, designing, and developing applications. 
+          </p>
+
+          <p>
+            I enjoy bringing ideas to life through code and continually learning new skills to improve my craft. I'm excited about the endless possibilities in technology and look forward to building meaningful solutions.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="/images/icon/about/introduction_to_cybersecurity_16.png" alt="Cybersecurity icon" width="40">
+              </div>
+            
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Cybersecurity</h4>
+            
+                <p class="service-item-text">
+                  Providing advanced security solutions to protect systems and data at a professional level.
+                </p>
+              </div>
+            
+            </li>
+            
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="/images/icon/about/Cordigo.jpg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile Development</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Software Development</h4>
+
+                <p class="service-item-text">
+                  Designing and developing software solutions tailored to meet diverse needs with a professional approach.
+                </p>
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="/images/icon/testimonials/chielo.jpg" alt="Chielo Depao" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Chielo Depao</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    In collaboration with Chielo Depao, a fellow student at Benguet State University pursuing a degree in Tourism, we embarked on an exciting project to develop a language translation tool named Cordispeak. This innovative tool aims to facilitate seamless communication between locals and tourists in the Cordillera region, fostering cultural exchange and understanding.
+                  </p>
+                  <p><strong>Our Focus: The User Interface</strong></p>
                 <p>As part of this collaborative effort, we concentrated on designing the user interface (UI) of Cordispeak. The UI is the visual aspect of the application that users interact with. Our goal was to create a clean, intuitive, and visually appealing interface that would make the translation process as smooth as possible.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-        <span id="closeCardBtn" class="close-btn">&times</span>
-      </div>
-  </div>
-</div>
-</div>
-<hr>
+                </div>
 
-  <!--end of portfolio-->
+              </div>
+            </li>
 
-<!--services-->
-<section id="services" class="services">
-    <div class="services-container">
-      <h1><strong>Services</strong></h1>
-      <p class="text-center">Offering a range of services including web development, UI/UX design, and computer services. See our my service packages and client testimonials below.</p>
-  <br>
-  <br>
-      <div class="accordion" id="accordionExample">
-        <!-- Web Development Service -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Web Development
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
             </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              Providing end-to-end web development services, including custom website design, backend development, and e-commerce solutions. The websites are responsive, fast, and SEO-friendly.
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img" alt="quote icon">
             </div>
-          </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2024">2024</time>
+
+              <div data-modal-text>
+                <p>
+                  In collaboration with Chielo Depao, a fellow student at Benguet State University pursuing a degree in Tourism, we embarked on an exciting project to develop a language translation tool named Cordispeak. This innovative tool aims to facilitate seamless communication between locals and tourists in the Cordillera region, fostering cultural exchange and understanding.
+                </p>
+                <p><strong>Our Focus: The User Interface</strong></p>
+              <p>As part of this collaborative effort, we concentrated on designing the user interface (UI) of Cordispeak. The UI is the visual aspect of the application that users interact with. Our goal was to create a clean, intuitive, and visually appealing interface that would make the translation process as smooth as possible.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
         </div>
-  
-        <!-- UI/UX Design Service -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              UI/UX Design
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+
+              <span>2007 — 2008</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+
+              <span>2006 — 2007</span>
+
+              <p class="timeline-text">
+                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
+                omnis..
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">High school of art and design</h4>
+
+              <span>2002 — 2004</span>
+
+              <p class="timeline-text">
+                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
+                magni dolores
+                eos.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Creative director</h4>
+
+              <span>2015 — Present</span>
+
+              <p class="timeline-text">
+                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
+                molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Art director</h4>
+
+              <span>2013 — 2015</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Web designer</h4>
+
+              <span>2010 — 2013</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
             </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              UI/UX design service focuses on creating user-friendly and visually appealing interfaces. Ensuring a seamless user experience across different devices and platforms.
-            </div>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
           </div>
-        </div>
-  
-        <!-- Computer Services -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Computer Services
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15262.440844834013!2d120.87429214113155!3d16.99371303896197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1736755741388!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
             </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                Providing a variety of computer services, including system setup, troubleshooting, and repair. Our team is experienced in handling both hardware and software issues.
-            </div>
-          </div>
-        </div>
-      </div>
-  
-  
-  
-      <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/services img/cybersecuirty.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>"Amazing service! The website looks great and functions perfectly. Highly recommend!"</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="images/services img/it-support.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>"Excellent UI/UX design that boosted user engagement. Very professional team."</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="images/services img/it-consult.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>"Quick and efficient computer repair. Saved us a lot of time and money!"</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
-    <hr>
-<!--end of services-->  
 
-<!--contact-->
-<div class="contact-container" id="contact">
-  <div class="section-title">
-    <h2>Contact</h2>
-  </div>
+          </form>
 
-  <div class="info-wrap">
-    <div class="info-item">
-      <i class="bi bi-geo-alt"></i>
-      <div>
-        <h3>Address</h3>
-        <p>Bontoc, Mountain Province</p>
-      </div>
+        </section>
+
+      </article>
+
     </div>
-    <div class="info-item">
-      <i class="bi bi-telephone"></i>
-      <div>
-        <h3>Call Us</h3>
-        <p>+69852787067</p>
-      </div>
-    </div>
-    <div class="info-item">
-      <i class="bi bi-envelope"></i>
-      <div>
-        <h3>Email Us</h3>
-        <p>christiankingaw69@gmail.com</p>
-      </div>
-    </div>
-  </div>
 
-  <form class="php-email-form" onsubmit="return validateForm(event)">
-    <input type="text" id="name-field" placeholder="Your Name" required>
-    <input type="email" id="email-field" placeholder="Your Email" required>
-    <input type="text" id="subject-field" placeholder="Subject" required>
-    <textarea id="message-field" rows="5" placeholder="Message" required></textarea>
+  </main>
 
-    <div id="loading-message" class="loading">Loading...</div>
-    <div id="error-message" class="error-message">There was an error sending your message.</div>
-    <div id="sent-message" class="sent-message">Your message has been sent. Thank you!</div>
 
-    <button type="submit">Send Message</button>
-  </form>
-</div>
- 
 
-<!--end of contact-->
-    </main>
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="/js/scripts.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
