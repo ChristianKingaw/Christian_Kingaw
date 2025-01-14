@@ -1,18 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
+:root{
+   /* COLORS */
+    /* solid */
+    --guardsmen-red: #D32F2F;
+    --gray: #fef3f3;
+    --black: #000;
+    --white: #fff;
+
+    /* TYPOGRAPHY */
+    --font-family: "Italiana", serif;
+}
+
 * {
     padding: 0;
     margin: 0;
     outline: none;
     border: none;
-    font-family: "Italiana", serif;
+    font-family: var(--font-family);
   }
 
   
 body {
-    background-color: rgb(18, 17, 17);
+    background-color: var(--black);
 }
- /*porfolio css*/
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
@@ -21,14 +33,14 @@ header {
 
 .head-logo {
     font-size: 2rem;
-    color: rgb(223, 50, 50);
+    color: var(--guardsmen-red);
     font-weight: 600;
     letter-spacing:  1pxs;
     padding: 20px 100px;
 }
 
 .head-logo span {
-    color: white;
+    color: var(--white);
 }
 
 nav {
@@ -41,79 +53,68 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: var(--white);
 }
 
 .nav-items {
     font-size: 1.2rem;
     font-weight: 500;
-    color: white;
+    color: var(--white);
     cursor: pointer;
     transition: 0.16;
 }
 
 .nav-items :hover {
-    color: red;
-    text-shadow: 0 0 20px #c0262a;
+    color: var(--guardsmen-red);
+    text-shadow: 0 0 20px var(--guardsmen-red);
 }
 
 nav button {
     font-size: 1.2rem;
     font-weight: 500;
-    color: white;
+    color: var(--white);
     cursor: pointer;
     transition: 0.16;
     letter-spacing: 1px;
-    background-color: #c0262a;
+    background-color: var(--guardsmen-red);
     height: 40px;
     width: 200px;
     border-radius: 50px;
 }
 
 nav button:hover {
-    background-color: #e70b12;
+    background-color: var(--gray);
     letter-spacing: 5px;
-}
-
-.content img {
-    position: absolute;
-    top: 185px;
-    bottom: 0;
-    right: 0;
-    left: 40%;
-    width: 50%;
-    pointer-events: none;
-    
 }
 
 .left-content {
     width: 50%;
     margin-left: 75px;
     font-size: 1.8rem;
-    color: #c0262a;
+    color: var(--guardsmen-red);
     letter-spacing: 2px;
     margin-left: 100px;
 }
 
 .left-content h2 {
     font-size: 2rem;
-    color: #c0262a;
+    color: var(--guardsmen-red);
     letter-spacing: 2px;
 }
 .left-content h2::selection {
-    background-color: #ffffff;
+    background-color: var(--white);
 }
 
 .left-content h1 {
     font-size: 6rem;
     font-weight: 800;
     letter-spacing: 3px;
-    color: white;
+    color: var(--white);
     padding-bottom: 15px 0;
 }
 
 .left-content h1::selection {
-    background-color: #c0262a;
+    background-color: var(--guardsmen-red);
 }
 
 .left-content p {
@@ -121,22 +122,22 @@ nav button:hover {
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 1.6;
-    color: rgb(206, 206, 206);
+    color: var(--gray);
     width: 75%;
     padding-bottom: 50px;
 }
 
 .left-content p::selection {
-    background-color: #c0262a;
+    background-color: var(--guardsmen-red);
 }
 
 .left-content button {
     font-size: 1.2rem;
-    color: #c0262a;
+    color: var(--guardsmen-red);
     font-weight: 600;
     letter-spacing: 2px;
     background-color: transparent;
-    border: 1px solid #c0262a;
+    border: 1px solid var(--guardsmen-red);
     height: 50px;
     width: 270px;
     border-radius: 50px;
@@ -146,8 +147,8 @@ nav button:hover {
 }
 
 .left-content button:hover {
-    background-color: #c0262a;
-    color: white;
+    background-color: var(--guardsmen-red);
+    color: var(--white);
     letter-spacing: 5px;
 }
 
@@ -157,6 +158,25 @@ nav button:hover {
     height: 80vh;
 }
 
+.right-content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: 400px;
+}
+
+.right-content img {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    right: 200px;
+    border-radius: 10%;
+    z-index: -1;
+
+}
 
 .social-links {
     display: flex;
@@ -168,9 +188,8 @@ nav button:hover {
     transform: translate(50%);
 }
 
-.social-links i {
-    font-size: 1.1rem;
-    color: #c0262a;
+.social-links li {
+    color: var(--guardsmen-red);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -184,91 +203,58 @@ nav button:hover {
 
 .social-links i:hover {
     transform: rotate(360deg);
-    box-shadow: 0 0 10px #c0262a;
+    box-shadow: 0 0 10px var(--guardsmen-red);
 }
 
 /* Animations */
-@keyframes bottomIn {
-    from{
-        transform: translateY(250px) scale(0.6);
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    to{
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes bottomInImage {
-    from{
-        transform: translateY(250px) scale(0.6);
-    }
-    to{
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-}
-
-.content h2 {
-    animation: bottomIn 1s ease-out forwards;
-    opacity: 0;
-    animation-delay: 0.2s;
-}
-
-.content h1 {
-    animation: bottomIn 1.2s ease-out forwards;
-    opacity: 0;
-    animation-delay: 0.4s;
-}   
-
-.content p {
-    animation: bottomIn 1.4s ease-out forwards;
-    opacity: 0;
-    animation-delay: 0.6s;
-}   
-.content button {
-    animation: bottomIn 1.4s ease-out forwards;
-    opacity: 0;
-    animation-delay: 0.8s;
-}   
-
-.content img {
-    animation: bottomInImage 1.6s ease-out forwards;
-    opacity: 0;
-    animation-delay: 0.10s;
-}
-
-
-@keyframes zoomIn {
-    from{
-        transform: scale(0);
-    }
-    to{
-        transform: scale(1);
+    to {
         opacity: 1;
     }
 }
 
 .nav-items,
 .head-logo,
-nav button{
-    animation: zoomIn 1.6s ease-out forwards;
+nav button {
+    animation: fadeIn 1s ease-out forwards;
     opacity: 0;
-    animation-delay: 0.6s;
+    animation-delay: 0.2s;  
 }
 
-
-@keyframes bottomInSocial {
-    from{
-        transform: translateY(250px) translateY(50%) scale(0.6);
-    }
-    to{
-        transform: translateY(0) translateY(50%) scale(1);
-        opacity: 1;
-    }
+.content h2 {
+    animation: fadeIn 1.2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.4s;
 }
 
-.social-links{
-    animation: zoomIn 1.6s ease-out forwards;
+.content h1 {
+    animation: fadeIn 1.4s ease-out forwards;
     opacity: 0;
     animation-delay: 0.6s;
+}   
+
+.content p {
+    animation: fadeIn 1.6s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.8s;
+}   
+.content button {
+    animation: fadeIn 1.8s ease-out forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}   
+
+.content img {
+    animation: fadeIn 2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 1.2s;
+}
+
+.social-links {
+    animation: fadeIn 2.2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 1.4s;
 }
