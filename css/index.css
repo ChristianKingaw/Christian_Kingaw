@@ -373,4 +373,33 @@ nav button {
         right: 50%;
         transform: translate(50%);
       }
+
+
+    }@media (max-width: 360px) {
+      .content {
+     
+        align-items: center;
+      }
+      .right-content {
+        order: 1;
+        margin-bottom: 20px;
+      }
+      .left-content {
+        order: 2;
+        width: 100%;
+        margin-left: 150px;
+        text-align: center; 
+      }
+      .left-content p {
+        margin-left: 50px;
+      }
+      .right-content img {
+        display: none;
+      }
+      .social-links {
+        top: 800px;
+        bottom: 0px;
+        right: 30%;
+        transform: translate(50%);
+      }
     }
