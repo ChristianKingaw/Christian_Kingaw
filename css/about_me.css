@@ -711,8 +711,8 @@ social-item .social-link:hover { color: var(--light-gray); }
 .portfolio-modal {
   background: var(--eerie-black-2);
   position: relative;
-  padding: 15px;
-  margin: 15px 12px;
+  padding: 20px;
+  margin-top: 200px;
   border: 1px solid var(--jet);
   border-radius: 14px;
   box-shadow: var(--shadow-5);
@@ -1633,3 +1633,5 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/* last */
