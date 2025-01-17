@@ -1410,6 +1410,17 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
+
+/* PORTFOLIO MODAL */
+.portfolio-modal {
+  width: 90%;
+  top: 50px;
+}
+.portfolio-modal-avatar-box img{
+  width: 280px;
+  height: 150x;
+}
+
 @media (min-width: 768px) {
 
   /* REUSED STYLE */
